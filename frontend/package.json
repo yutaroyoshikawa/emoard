@@ -10,7 +10,20 @@
     "build": "nextron build",
     "postinstall": "electron-builder install-app-deps",
     "storybook": "start-storybook -p 6006 -c .storybook",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint './renderer/**/*.{ts,tsx}'",
+      "eslint './stories/**/*.{ts,tsx}'"
+    ]
   },
   "dependencies": {
     "electron-serve": "^0.4.0",
@@ -41,9 +54,13 @@
     "babel-loader": "^8.0.6",
     "electron": "^7.0.0",
     "electron-builder": "^21.2.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "fontfaceobserver": "^2.1.0",
+    "husky": "^3.0.9",
     "next": "^9.1.1",
     "nextron": "^5.12.4",
+    "prettier": "^1.18.2",
     "react": "^16.11.0",
     "react-docgen-typescript-loader": "^3.3.0",
     "react-dom": "^16.11.0",

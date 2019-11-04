@@ -1,0 +1,8 @@
+extends:
+  - react-app
+  - plugin:prettier/recommended
+rules:
+  prettier/prettier: # - error以下はお好みで
+  - error
+  - semi: false
+    singleQuote: true
