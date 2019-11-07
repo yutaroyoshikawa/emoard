@@ -22,7 +22,8 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix './renderer/**/*.{ts,tsx}'",
-      "eslint --fix './stories/**/*.{ts,tsx}'"
+      "eslint --fix './stories/**/*.{ts,tsx}'",
+      "terraform fmt ../backend/infrastructure"
     ]
   },
   "dependencies": {
