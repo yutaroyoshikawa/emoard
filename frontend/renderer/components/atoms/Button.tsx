@@ -4,12 +4,10 @@ interface Prop {
   onclick: () => void;
 }
 
-const Button: React.FC<Prop> = props => {
-  return (
-    <button onClick={props.onclick}>
-      {props.children}
-    </button>
-  );
-};
+const Button: React.FC<Prop> = props => (
+  <button type="button" onClick={props.onclick}>
+    {props.children}
+  </button>
+);
 
 export default Button;

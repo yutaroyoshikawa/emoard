@@ -1,0 +1,50 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "airbnb"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "env": { "browser": true, "node": true, "es6": true },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "react/prop-types": [
+      0
+    ],
+    "no-console": "off",
+    "no-unused-expressions": "off",
+    "object-curly-newline": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
+    "jsx-a11y/anchor-has-content": "off",
+    "implicit-arrow-linebreak": "off",
+    "function-paren-newline": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "arrow-parens": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
+  }
+}

@@ -8,7 +8,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
-import { Link } from '../components';
+import Link from '../components/Link';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'center',
       paddingTop: theme.spacing(4),
     },
-  })
+  }),
 );
 
 const Home = () => {
@@ -26,7 +26,7 @@ const Home = () => {
   const handleClick = () => setOpen(true);
 
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>Home - Nextron (with-typescript-material-ui)</title>
       </Head>
@@ -49,7 +49,7 @@ const Home = () => {
         <Typography variant="subtitle1" gutterBottom>
           with Nextron
         </Typography>
-        <img src="/static/logo.png" />
+        <img src="/static/logo.png" alt="logo" />
         <Typography gutterBottom>
           <Link href="/next">Go to the next page</Link>
         </Typography>
@@ -57,7 +57,7 @@ const Home = () => {
           Super Secret Password
         </Button>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
