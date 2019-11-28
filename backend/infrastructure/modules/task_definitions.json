@@ -1,0 +1,21 @@
+[
+  {
+    "name": "emoard",
+    "image": "nginx:latest",
+    "essential": true,
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-region": "ap-northeast-1",
+        "awslogs-stream-prefix": "ecs",
+        "awslogs-group": "/ecs/emoard"
+      }
+    },
+    "portMappings": [
+      {
+        "protocol": "tcp",
+        "containerPort": 80
+      }
+    ]
+  }
+]
