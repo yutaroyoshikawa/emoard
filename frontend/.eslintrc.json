@@ -1,16 +1,21 @@
 {
   "extends": [
+    "airbnb",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint",
-    "airbnb"
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/@typescript-eslint"
   ],
   "plugins": [
     "@typescript-eslint",
     "react",
-    "react-hooks"
+    "react-hooks",
+    "flowtype",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "env": { "browser": true, "node": true, "es6": true },
@@ -31,6 +36,7 @@
     "implicit-arrow-linebreak": "off",
     "function-paren-newline": "off",
     "import/no-extraneous-dependencies": "off",
+    "no-nested-ternary": 1,
     "react/jsx-filename-extension": [
       "error",
       {

@@ -1,30 +1,26 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { theme } from '../lib/index';
+import reset from 'styled-reset';
+import { createGlobalStyle } from 'styled-components';
 
-export default class MyApp extends App {
-  componentDidMount(): void {
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles && jssStyles.parentNode) {
-      jssStyles.parentNode.removeChild(jssStyles);
-    }
-  }
-
+class MyApp extends App {
   render(): JSX.Element {
     const { Component, pageProps } = this.props;
     return (
       <>
         <Head>
-          <title>with-typescript-material-ui</title>
+          <title>emoard</title>
         </Head>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Component {...pageProps} />
-        </ThemeProvider>
+        <Global />
+        <Component {...pageProps} />
       </>
     );
   }
 }
+
+export default MyApp;
+
+const Global = createGlobalStyle`
+${reset}
+`;
